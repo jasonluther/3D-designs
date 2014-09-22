@@ -27,7 +27,8 @@ module bracket() {
   difference() {
     rotate(a=45, v=[1,0,0]) 
       cube([bracket_width, towel_rack_width+bracket_thickness, towel_rack_width+bracket_thickness], center=true);
-    translate([0, -5, -7]) towel_rack();
+    translate([0, -2, -12]) towel_rack();
+    //translate([0, -5, -7]) towel_rack();
   }
 }
 
