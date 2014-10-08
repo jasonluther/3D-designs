@@ -13,7 +13,7 @@ $fn=100;
 // push fit pins
 
 // Generic: part, part holder
-antenna_diameter = 24;
+antenna_diameter = 26; // 24
 antenna_height = 2.1;
 switch_height = 4.05;
 switch_width = 12; //11.7
@@ -24,6 +24,10 @@ case_height = switch_height + case_z_thickness * 2;
 
 top_bottom_x_offset = 0;
 top_bottom_y_offset = 20;
+
+calc_offset_c = (antenna_diameter+case_xy_thickness)/2;
+calc_offset_y = (switch_width + case_xy_thickness*2)/2;
+switch_x_offset = sqrt(calc_offset_c*calc_offset_c - calc_offset_y*calc_offset_y) + 10;
 
 module antenna_part() {
   translate([0,0,case_height/2-antenna_height/2]) 
@@ -62,7 +66,6 @@ switch_depth = switch_d + switch_tab_d;
 switch_connector_depth = 5.6;
 switch_full_depth = switch_d + switch_connector_depth;
 switch_h = switch_height;
-switch_x_offset = 21;
 switch_tab_width = 2; // 1.4
 module switch_unit() {
   x= switch_d;
