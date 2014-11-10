@@ -13,8 +13,8 @@ $fn=100;
 // push fit pins
 
 // Generic: part, part holder
-antenna_diameter = 26; // 24
-antenna_height = 2.1;
+antenna_diameter = 21; // 24
+antenna_height = 2.0; // 2.1
 switch_height = 4.05;
 switch_width = 12; //11.7
 
@@ -144,7 +144,7 @@ module all() {
 }
 
 function y_dist(x, r) = sqrt(r*r - x*x);
-snap_x_offset = antenna_diameter/2.2;
+snap_x_offset = antenna_diameter/2.4;
 snap_radius_offset = antenna_diameter/2+case_xy_thickness*2.25;
 
 module bottom() {
