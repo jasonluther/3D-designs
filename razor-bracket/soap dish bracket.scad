@@ -47,7 +47,7 @@ module the_bracket() {
     soapdish_cutout();
   }
 }
-//translate([0, 0, bracket_width/2]) rotate(a=90, v=[0,1,0]) 
+translate([0, 0, bracket_width/2]) rotate(a=90, v=[0,1,0]) 
 the_bracket();
 
 module cutout() {
